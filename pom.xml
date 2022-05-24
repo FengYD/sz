@@ -12,6 +12,7 @@
         <module>sz-source</module>
         <module>sz-model</module>
         <module>sz-rpc</module>
+        <module>sz-admin</module>
     </modules>
 
     <properties>
@@ -24,7 +25,10 @@
         <!--框架属性-->
         <spring-boot-dependencies.version>2.1.4.RELEASE</spring-boot-dependencies.version>
         <spring-cloud-dependencies.version>Greenwich.RELEASE</spring-cloud-dependencies.version>
-        <!--框架属性 end-->
+        <spring-boot-maven-plugin.version>2.0.6.RELEASE</spring-boot-maven-plugin.version>
+        <maven-assembly-plugin.version>3.1.1</maven-assembly-plugin.version>
+        <maven-compiler-plugin.version>3.8.0-jboss-2</maven-compiler-plugin.version>
+        <maven-archetype-plugin.version>2.3</maven-archetype-plugin.version>
 
     </properties>
 

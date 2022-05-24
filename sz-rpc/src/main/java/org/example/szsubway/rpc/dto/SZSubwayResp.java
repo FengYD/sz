@@ -10,7 +10,7 @@ import java.util.List;
  * @Description
  */
 @Data
-public class SZSubwayResp {
+public class SZSubwayResp<T> {
 
     private Long total;
 
@@ -18,6 +18,6 @@ public class SZSubwayResp {
 
     private Long rows;
 
-    private List<SZSubwayData> data;
+    private List<T> data;
 
 }
