@@ -17,4 +17,4 @@ CREATE TABLE sz_subway
     `create_time`  datetime COMMENT '记录创建时间',
     `update_time`  datetime COMMENT '记录更新时间',
     PRIMARY KEY (`id`)
-) ENGINE = InnoDB COMMENT ='商品上报渠道表';
+) ENGINE = InnoDB COMMENT ='深圳地铁';

@@ -1,0 +1,67 @@
+project:
+  version: 1.0
+  code: sz
+spring:
+  jackson:
+    date-format: 'yyyy-MM-dd HH:mm:ss'
+    locale: zh_CN
+    time-zone: 'GMT+8'
+    #为空或null也可参与序列化
+    default-property-inclusion: always
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://124.223.158.96:3306/SZ?allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: root
+    password: 0zf!llj=N1b521
+  redis:
+    host: 127.0.01
+    port: 6379
+  cache:
+    type: ehcache
+    ehcache:
+      config: ehcache.xml
+    redis:
+      use-key-prefix: true
+      time-to-live: 1d
+#监控
+management:
+  server:
+    port: 22803
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: /application
+
+debug: false
+
+
+#mybatis设置
+mybatis:
+  configuration:
+    default-statement-timeout: 10
+#分页设置
+pagehelper:
+  offsetAsPageNum: true
+  rowBoundsWithCount: true
+  reasonable: true
+  supportMethodsArguments: true
+  pageSizeZero: false
+
+#swagger生成API相关
+swagger:
+  #是否启用swagger，默认：true
+  enabled: true
+  title: 'A'
+  description: 'A'
+  #swagger扫描的基础包，默认：全扫描
+  #需要处理的基础URL规则,默认：/**
+  base-path: /**
+  #需要排除的URL规则，默认：空
+  exclude-path: /error, /ops/**
+  jackson:
+    date-format: 'yyyy-MM-dd HH:mm:ss'
+    locale: zh_CN
+    time-zone: 'GMT+8'
+    #为空或null也可参与序列化
+    default-property-inclusion: always

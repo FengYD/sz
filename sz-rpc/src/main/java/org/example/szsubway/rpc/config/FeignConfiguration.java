@@ -27,10 +27,4 @@ public class FeignConfiguration {
         return new SpringFormEncoder(new SpringEncoder(messageConverters));
     }
 
-//    @Bean
-//    public Decoder feignDecoder(){
-//        BaiduMessageConverter wxConverter = new BaiduMessageConverter();
-//        ObjectFactory<HttpMessageConverters> objectFactory = () -> new HttpMessageConverters(wxConverter);
-//        return new SpringDecoder(objectFactory);
-//    }
 }
