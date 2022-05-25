@@ -14,7 +14,7 @@ CREATE TABLE sz_subway
     `closeDate`    datetime    NULL COMMENT '结算日期',
     `state`        int         NULL COMMENT '数据状态',
     `is_delete`    int(1)      NOT NULL DEFAULT 0 COMMENT '是否逻辑删除 1是0否',
-    `create_time`  datetime COMMENT '记录创建时间',
-    `update_time`  datetime COMMENT '记录更新时间',
+    `create_time`  datetime    NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '记录创建时间',
+    `update_time`  datetime    NOT NULL on update CURRENT_TIMESTAMP COMMENT '记录更新时间',
     PRIMARY KEY (`id`)
-) ENGINE = InnoDB COMMENT ='深圳地铁';
+) ENGINE = InnoDB COMMENT ='深圳地铁数据';

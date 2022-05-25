@@ -1,4 +1,4 @@
-package org.example.szsubway.rpc.dto;
+package org.example.szsubway.model.dto;
 
 import lombok.Data;
 

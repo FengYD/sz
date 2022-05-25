@@ -9,13 +9,19 @@ spring:
     #为空或null也可参与序列化
     default-property-inclusion: always
   datasource:
-    driverClassName: com.mysql.jdbc.Driver
+    driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://124.223.158.96:3306/SZ?allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=convertToNull&useSSL=false
     username: root
     password: 0zf!llj=N1b521
   redis:
-    host: 127.0.01
+    host: 124.223.158.96
     port: 6379
+    password: youpassword
+    connect-timeout: 1000
+    lettuce:
+      pool:
+        enabled: true
+        max-active: 20
   cache:
     type: ehcache
     ehcache:
@@ -65,3 +71,18 @@ swagger:
     time-zone: 'GMT+8'
     #为空或null也可参与序列化
     default-property-inclusion: always
+
+
+minio:
+  # 是否启用Minio
+  enable: true
+  # Minio接入地址
+  endpoint: http://124.223.158.96:9999
+  # Minio AccessKey
+  accessKey: admin
+  # Minio SecretKey
+  secretKey: fengyadong
+  # Minio存储桶
+  bucket: sz_subway
+  # Minio对外访问地址
+  gateway: http://124.223.158.96:9990
